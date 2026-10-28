@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
   <meta name="description" content="Privacy disclosures for Integration Helper by RV, an independent enterprise integration assistant by Rameshkumar Varanganti.">
   <title>Privacy Policy | Integration Helper by RV</title>
   <style>
@@ -15,7 +14,7 @@
     nav,.links{display:flex;gap:17px;flex-wrap:wrap}a{color:var(--a);text-underline-offset:3px;overflow-wrap:anywhere}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--txt)}
     main{padding-top:44px;padding-bottom:70px}h1{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;line-height:1.15;margin:0 0 16px}h2{font-size:1.28rem;margin-top:32px}h3{font-size:1.04rem}p,li{color:#cfe0ea}ul{padding-left:23px}
     .eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--a);font-weight:700;font-size:.77rem}.lede{font-size:1.13rem;color:var(--muted)}
-    .panel{background:var(--panel);border:1px solid var(--line);padding:20px 24px;border-radius:16px;margin:23px 0}.draft{border-color:#e3b969}.pending{background:#382d17;border-left:3px solid #e3b969;padding:14px 18px;color:#ffdf9a}
+    .panel{background:var(--panel);border:1px solid var(--line);padding:20px 24px;border-radius:16px;margin:23px 0}
     footer{border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}code{overflow-wrap:anywhere;color:#b4f3e9}strong{color:#f3fbff}
     @media(max-width:650px){header{align-items:flex-start;flex-direction:column}header,main,footer{padding-left:18px;padding-right:18px}}
   </style>
@@ -30,9 +29,7 @@
   <main>
     <div class="eyebrow">Privacy policy</div>
     <h1>Integration Helper by RV Privacy Policy</h1>
-    <!-- OWNER: Complete the three CONFIRM blocks, set the effective date, and remove this draft panel before publishing. Remove the noindex meta tag when the policy is final. -->
-    <aside class="panel draft" aria-label="Draft status"><strong>Draft for publisher review. Not ready for publication.</strong><p>The three highlighted CONFIRM blocks require factual completion. Do not submit this draft as a completed privacy policy.</p></aside>
-    <p class="lede">Effective date: [SET TO ACTUAL PUBLICATION DATE]. This policy covers Integration Helper by RV, previously named SAP Integration Helper, including its publisher-operated remote MCP service.</p>
+    <p class="lede">Last updated: October 28, 2026. This policy covers Integration Helper by RV, previously named SAP Integration Helper, including its publisher-operated remote MCP service.</p>
 
     <section>
       <h2>1. Operator and contact</h2>
@@ -68,20 +65,20 @@
       <h2>5. Application storage and infrastructure retention</h2>
       <p>The reviewed application processes tool arguments to construct a response and does not implement persistent storage of query text, submitted code, or tool outputs. Its checked-in configuration has no database, KV, object-storage, or Durable Object bindings. No explicit console logging is implemented in the application.</p>
       <p>The Cloudflare dashboard reviewed for this Worker shows Workers Logs and Workers Traces disabled. Disabled application logging does not establish that all infrastructure metadata or security records are unretained.</p>
-      <p class="pending"><strong>CONFIRM 1 — Cloudflare retention:</strong> Identify any other enabled account-level logs, security records, exports, caches, or diagnostic services; the metadata they process; whether any request bodies or results are captured; and their actual retention periods. State the applicable Cloudflare provider-processing disclosures. Do not replace this block with an unverified claim that Cloudflare retains nothing.</p>
+      <p>Cloudflare supplies operational metrics such as request counts, errors, and CPU usage even when Workers Logs and Traces are disabled. Its documentation states that Worker metrics can be inspected for up to three months. The publisher does not implement application storage of tool inputs or results, and does not enable additional logging or exports.</p><p>Cloudflare may separately process IP addresses, routing information, and other network or security metadata to operate and protect its services. Provider-controlled retention depends on the data category, service purposes, and legal obligations described in <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare’s Privacy Policy</a>; this policy does not promise that Cloudflare retains no data. See also <a href="https://developers.cloudflare.com/workers/observability/metrics-and-analytics/">Cloudflare’s Worker metrics documentation</a>.</p>
     </section>
 
     <section>
       <h2>6. Website visits and support</h2>
       <p>Opening Agentic Integration Hub webpages is separate from invoking MCP tools. If you contact the publisher, your email address, message, and any attachments are used to respond to your inquiry and resolve reported issues.</p>
-      <p class="pending"><strong>CONFIRM 2 — Website:</strong> Identify the website hosting/CDN/security providers, actual request-log fields and retention periods, and any cookies, analytics, contact forms, or other collection. Describe each purpose, recipient, and any available user control. Do not infer the website’s practices from the MCP Worker configuration.</p>
-      <p class="pending"><strong>CONFIRM 3 — Support retention:</strong> Identify the support email provider and the actual period or specific deletion criterion for inquiries and attachments. Include applicable backup expiry, legal retention exceptions, and the process used to fulfill requests. Adopt and implement any new retention commitment before publishing it.</p>
+      <p>The website is configured for Cloudflare Pages and uses Cloudflare’s delivery and security infrastructure. The reviewed website source does not implement tracking cookies, advertising trackers, third-party visitor analytics, local storage, session storage, or a contact-submission form. Its navigation, search filters, and browser developer utilities run locally in the browser; these utilities are separate from the remote MCP tools described above.</p><p>The inspected live homepage includes Cloudflare email-address obfuscation and network-error reporting headers. Cloudflare may therefore process technical request and network-error metadata for delivery, reliability, and security, including IP addresses and routing data as described in its privacy policy. A network-reporting configuration lifetime is not a data-retention period. The publisher does not enable additional application-level website logging or analytics. No tracking cookie was set in the inspected homepage response; this observation is not a guarantee about every provider response or security challenge.</p>
+      <p>Support is provided by email at <a href="mailto:contact@agenticintegrationhub.com">contact@agenticintegrationhub.com</a>, rather than a website contact form. The domain’s mail records direct incoming mail to Hostinger. Email content and attachments are processed by the email service and, if configured, any forwarding destination used by the publisher. The website and MCP repositories do not determine mailbox retention.</p><p>Support messages and attachments are retained in the support mailbox until the publisher manually deletes them. There is no automatic deletion schedule or fixed retention period for that correspondence. Copies retained by the email provider, including deleted-item recovery or backups where applicable, follow the provider’s service practices; manual mailbox deletion does not establish immediate removal from every provider system.</p><p>Support is provided on a limited, best-effort basis. Not every inquiry receives a response, and no response time or service-level commitment is guaranteed. For access, correction, or deletion requests, contact the publisher through the contact page and identify the relevant correspondence without resending confidential material. These requests remain subject to applicable legal obligations.</p>
     </section>
 
     <section>
       <h2>7. Your choices and requests</h2>
       <p>You choose what information to submit and can remove unnecessary details before a remote tool is invoked. You can stop using or remove the plugin to stop future use through that installation. Removing it does not automatically delete independently held support correspondence or infrastructure records.</p>
-      <p>Use the <a href="/contact.html">contact page</a> to request information about, correction of, or deletion of personal information held by the publisher. Provide enough information to locate the interaction, such as its approximate date, without resending confidential material. Limited identity verification may be needed. The completed retention disclosures above must explain any applicable limitations.</p>
+      <p>Use the <a href="/contact.html">contact page</a> to request information about, correction of, or deletion of personal information held by the publisher. Provide enough information to locate the interaction, such as its approximate date, without resending confidential material. Limited identity verification may be needed. Support correspondence has no automatic deletion schedule; provider-controlled records and any applicable legal retention requirements may limit immediate deletion.</p>
       <p>For ChatGPT conversation, file, and account data, use OpenAI’s available account controls and support. Deleting a ChatGPT conversation does not by itself request deletion of independently retained publisher or provider records.</p>
     </section>
 
