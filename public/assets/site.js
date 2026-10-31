@@ -88,3 +88,24 @@ if(arch){arch.classList.add('live');if(reduce)arch.classList.add('still');
  const steps=[...arch.children];let n=0;steps.forEach(el=>{el.style.setProperty('--i',n);n++});arch.style.setProperty('--n',n);
  if(!reduce)pauseBtn(arch.closest('.visual'),p=>arch.classList.toggle('paused',p));}
 })();
+
+/* ---- Contact form ---- */
+(function(){const f=document.querySelector('#contactForm');if(!f)return;
+const status=f.querySelector('#cfStatus'),btn=f.querySelector('#cfSend'),key=(f.dataset.sitekey||'').trim();let widget=null;
+const say=(msg,kind)=>{status.textContent=msg;status.className='formstatus '+(kind||'')};
+if(key){window.onTurnstileLoad=function(){widget=window.turnstile.render('#cfTurnstile',{sitekey:key,theme:'dark'})};
+ const s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad&render=explicit';s.async=true;s.defer=true;document.head.appendChild(s);}
+f.addEventListener('submit',async e=>{e.preventDefault();
+ const v=n=>(f.elements[n].value||'').trim();const email=v('email'),subject=v('subject'),message=v('message');
+ if(!/^[^\s@<>()",;:]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)){say('Please enter a valid email address.','err');f.elements.email.focus();return}
+ if(subject.length<3){say('Please enter a subject.','err');f.elements.subject.focus();return}
+ if(message.length<10){say('Please enter a message of at least 10 characters.','err');f.elements.message.focus();return}
+ const token=key&&window.turnstile&&widget!==null?window.turnstile.getResponse(widget):'';
+ if(key&&!token){say('Please complete the verification check.','err');return}
+ btn.disabled=true;btn.textContent='Sending…';say('');
+ try{const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:v('name'),email,subject,message,website:v('website'),turnstileToken:token})});
+  let d={};try{d=await r.json()}catch(_){}
+  if(r.ok&&d.ok){f.reset();say('Thank you. Your message has been sent and we will reply by email.','ok')}
+  else say(d.error||'Your message could not be sent. Please use the Email us button instead.','err');
+ }catch(_){say('Network error. Please try again or use the Email us button.','err')}
+ finally{btn.disabled=false;btn.textContent='Send message';if(key&&window.turnstile&&widget!==null)window.turnstile.reset(widget)}});})();
