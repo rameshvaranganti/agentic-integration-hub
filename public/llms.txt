@@ -26,6 +26,6 @@
 ## About
 
 - [Author](https://agenticintegrationhub.com/about): Rameshkumar Varanganti
-- [Research](https://agenticintegrationhub.com/research): publications
+- [Research](https://agenticintegrationhub.com/research): research areas, open problems and standards tracker
 - [Apps and plugins](https://agenticintegrationhub.com/apps): assistant plugins with support, privacy and terms pages
 - [Disclaimer](https://agenticintegrationhub.com/disclaimer): independence statement
