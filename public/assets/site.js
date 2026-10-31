@@ -56,3 +56,35 @@ function build(){const skills=v('#acSkills').split('\n').map(l=>l.trim()).filter
  const warn=[];if(!/^https:\/\//.test(card.supportedInterfaces[0].url))warn.push('Endpoint should use https://');if(!card.description)warn.push('Add a description.');if(!skills.length)warn.push('Add at least one skill.');
  out.textContent=JSON.stringify(card,null,2)+'\n\n// Draft only. Replace example URLs, declare which schemes are required, add "signatures" (detached JWS over the RFC 8785 canonical card)\n// and validate against the official A2A v1.0 schema before publishing.'+(warn.length?'\n// Check: '+warn.join(' '):'');}
 b.addEventListener('click',build);document.querySelector('#acCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(out.textContent.split('\n\n// Draft')[0]);document.querySelector('#acCopy').textContent='Copied'}catch(e){document.querySelector('#acCopy').textContent='Copy unavailable'}});build();})();
+
+/* ---- Live process-flow animation for diagrams ---- */
+(function(){
+const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const NS='http://www.w3.org/2000/svg';
+function pauseBtn(host,onToggle){const b=document.createElement('button');b.type='button';b.className='flowtoggle';b.setAttribute('aria-pressed','false');b.textContent='❚❚ Pause flow';
+ b.addEventListener('click',()=>{const p=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(p));b.textContent=p?'▶ Play flow':'❚❚ Pause flow';onToggle(p)});host.appendChild(b);return b}
+/* Article SVG diagrams: dots travel each connector in top-to-bottom order, then the cycle repeats */
+document.querySelectorAll('figure.diagram svg').forEach((svg,si)=>{
+ const paths=[...svg.querySelectorAll('path.l')];if(!paths.length)return;
+ svg.classList.add('flowing');if(reduce)return;
+ const info=paths.map((p,i)=>{if(!p.id)p.id='flow'+si+'-'+i;const a=p.getPointAtLength(0);return {p,y:Math.round(a.y/12)}});
+ const rows=[...new Set(info.map(x=>x.y))].sort((a,b)=>a-b);
+ const step=0.9, travel=0.85, cycle=rows.length*step+1.2;
+ info.forEach(({p,y})=>{const k=rows.indexOf(y), t0=k*step/cycle, t1=Math.min((k*step+travel)/cycle,0.99);
+  const c=document.createElementNS(NS,'circle');c.setAttribute('r','5.5');c.setAttribute('class','flowdot');
+  const m=document.createElementNS(NS,'animateMotion');m.setAttribute('dur',cycle+'s');m.setAttribute('repeatCount','indefinite');m.setAttribute('calcMode','linear');
+  m.setAttribute('keyPoints','0;0;1;1');m.setAttribute('keyTimes','0;'+t0.toFixed(3)+';'+t1.toFixed(3)+';1');
+  const mp=document.createElementNS(NS,'mpath');mp.setAttribute('href','#'+p.id);mp.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href','#'+p.id);m.appendChild(mp);
+  const o=document.createElementNS(NS,'animate');o.setAttribute('attributeName','opacity');o.setAttribute('dur',cycle+'s');o.setAttribute('repeatCount','indefinite');
+  o.setAttribute('values','0;0;1;1;0;0');o.setAttribute('keyTimes','0;'+Math.max(t0-0.001,0).toFixed(3)+';'+t0.toFixed(3)+';'+t1.toFixed(3)+';'+Math.min(t1+0.02,0.995).toFixed(3)+';1');
+  c.appendChild(m);c.appendChild(o);svg.appendChild(c);
+  const g=document.createElementNS(NS,'animate');g.setAttribute('attributeName','stroke');g.setAttribute('dur',cycle+'s');g.setAttribute('repeatCount','indefinite');
+  g.setAttribute('values','#53e0b6;#53e0b6;#eafff9;#53e0b6;#53e0b6');g.setAttribute('keyTimes','0;'+t0.toFixed(3)+';'+((t0+t1)/2).toFixed(3)+';'+t1.toFixed(3)+';1');p.appendChild(g);});
+ pauseBtn(svg.closest('figure'),p=>{p?svg.pauseAnimations():svg.unpauseAnimations();svg.classList.toggle('paused',p)});
+});
+/* Homepage architecture: steps light up in order as a request flows through */
+const arch=document.querySelector('.visual .vstack');
+if(arch){arch.classList.add('live');if(reduce)arch.classList.add('still');
+ const steps=[...arch.children];let n=0;steps.forEach(el=>{el.style.setProperty('--i',n);n++});arch.style.setProperty('--n',n);
+ if(!reduce)pauseBtn(arch.closest('.visual'),p=>arch.classList.toggle('paused',p));}
+})();
