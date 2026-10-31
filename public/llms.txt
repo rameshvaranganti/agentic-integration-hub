@@ -1,0 +1,31 @@
+# Agentic Integration Hub
+
+> Independent, vendor-neutral guides on agentic integration: connecting enterprise AI agents to ERP, HR and finance systems with MCP, A2A, MCP gateways, governed APIs and orchestration. Written by Rameshkumar (Ramesh) Varanganti, Enterprise Integration Lead and Architect with 20+ years of SAP integration experience. Reviewed against MCP 2026-07-28 and A2A v1.0.
+
+## Guides
+
+- [The agent protocol stack in 2026: MCP, A2A, AP2, UCP and ACP](https://agenticintegrationhub.com/articles/agent-protocol-stack-2026): Which protocol connects what, who governs it, and how MCP and A2A fit together in an enterprise landscape.
+- [What MCP 2026-07-28 changes for integration architects](https://agenticintegrationhub.com/articles/mcp-2026-07-28-stateless): Stateless core, Multi Round-Trip Requests, routing headers and a migration checklist for servers and gateways.
+- [SAP Integration Suite MCP Gateway](https://agenticintegrationhub.com/articles/sap-integration-suite-mcp-gateway): SAP APIs, iFlows and RFCs as governed agent tools: what is available, what is on the roadmap, and design rules.
+- [A2A for enterprise integration](https://agenticintegrationhub.com/articles/a2a-enterprise-integration): Agent Cards, the task lifecycle, security schemes and a checklist for onboarding external agents.
+- [OWASP Agentic Top 10, mapped to integration controls](https://agenticintegrationhub.com/articles/owasp-agentic-top-10-integration-controls): ASI01 to ASI10 mapped to gateway, API management and iFlow controls, plus the EU AI Act timeline.
+- [Agent identity and authorization](https://agenticintegrationhub.com/articles/agent-identity-authorization): User, agent and service identities; OAuth 2.1 for MCP; token exchange; multi-hop delegation; NIST and IETF status.
+- [MCP gateway architecture](https://agenticintegrationhub.com/articles/mcp-gateway-basics): Reference architecture, per-tool authorization, OAuth and a worked example of exposing an existing API to agents.
+- [API-centric integration patterns](https://agenticintegrationhub.com/articles/api-centric-patterns): Build governed APIs that connect enterprise applications and agent-enabled workflows.
+- [Policy-governed enterprise agents](https://agenticintegrationhub.com/articles/policy-governed-agents): Keeping agent actions authorized, explainable and auditable with approval gates and least privilege.
+- [Integration orchestration fundamentals](https://agenticintegrationhub.com/articles/integration-orchestration): Correlation IDs, compensation and deterministic checkpoints for agentic workflows.
+
+## Hubs
+
+- [MCP and A2A](https://agenticintegrationhub.com/mcp-api): current specifications and gateway landscape
+- [Enterprise agents](https://agenticintegrationhub.com/agents): agent platforms and protocol support
+- [Orchestration](https://agenticintegrationhub.com/orchestration): long-running tasks, approvals and integration patterns
+- [Developer tools](https://agenticintegrationhub.com/tools): MCP tool linter, A2A Agent Card builder, payload utilities
+- [What's new](https://agenticintegrationhub.com/whats-new): dated changelog
+
+## About
+
+- [Author](https://agenticintegrationhub.com/about): Rameshkumar Varanganti
+- [Research](https://agenticintegrationhub.com/research): publications
+- [Apps and plugins](https://agenticintegrationhub.com/apps): assistant plugins with support, privacy and terms pages
+- [Disclaimer](https://agenticintegrationhub.com/disclaimer): independence statement
