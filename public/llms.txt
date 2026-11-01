@@ -4,10 +4,12 @@
 
 ## Guides
 
+- [What is agentic integration?](https://agenticintegrationhub.com/articles/what-is-agentic-integration): Definition, how it differs from traditional integration, reference architecture, five patterns and how to start.
+- [Enterprise AI agent integration](https://agenticintegrationhub.com/articles/enterprise-ai-agent-integration): Connecting AI agents to ERP, HR, CRM and finance: patterns, system-by-system notes, readiness checklist and rollout.
 - [The agent protocol stack in 2026: MCP, A2A, AP2, UCP and ACP](https://agenticintegrationhub.com/articles/agent-protocol-stack-2026): Which protocol connects what, who governs it, and how MCP and A2A fit together in an enterprise landscape.
 - [What MCP 2026-07-28 changes for integration architects](https://agenticintegrationhub.com/articles/mcp-2026-07-28-stateless): Stateless core, Multi Round-Trip Requests, routing headers and a migration checklist for servers and gateways.
 - [SAP Integration Suite MCP Gateway](https://agenticintegrationhub.com/articles/sap-integration-suite-mcp-gateway): SAP APIs, iFlows and RFCs as governed agent tools: what is available, what is on the roadmap, and design rules.
-- [A2A for enterprise integration](https://agenticintegrationhub.com/articles/a2a-enterprise-integration): Agent Cards, the task lifecycle, security schemes and a checklist for onboarding external agents.
+- [Agent-to-agent (A2A) integration](https://agenticintegrationhub.com/articles/a2a-enterprise-integration): Agent Cards, the task lifecycle, security schemes and a checklist for onboarding external agents.
 - [OWASP Agentic Top 10, mapped to integration controls](https://agenticintegrationhub.com/articles/owasp-agentic-top-10-integration-controls): ASI01 to ASI10 mapped to gateway, API management and iFlow controls, plus the EU AI Act timeline.
 - [Agent identity and authorization](https://agenticintegrationhub.com/articles/agent-identity-authorization): User, agent and service identities; OAuth 2.1 for MCP; token exchange; multi-hop delegation; NIST and IETF status.
 - [MCP gateway architecture](https://agenticintegrationhub.com/articles/mcp-gateway-basics): Reference architecture, per-tool authorization, OAuth and a worked example of exposing an existing API to agents.
