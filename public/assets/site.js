@@ -109,3 +109,25 @@ f.addEventListener('submit',async e=>{e.preventDefault();
   else say(d.error||'Your message could not be sent. Please use the Email us button instead.','err');
  }catch(_){say('Network error. Please try again or use the Email us button.','err')}
  finally{btn.disabled=false;btn.textContent='Send message';if(key&&window.turnstile&&widget!==null)window.turnstile.reset(widget)}});})();
+
+/* ---- 2026-11 homepage: tabs and agent trace ---- */
+(function(){
+const tabs=[...document.querySelectorAll('.aitabs [role=tab]')];
+if(tabs.length){
+ const show=(t,focus)=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;const p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.classList.toggle('on',on)});if(focus)t.focus()};
+ tabs.forEach((t,i)=>{t.addEventListener('click',()=>show(t));t.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowRight')j=(i+1)%tabs.length;else if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')j=0;else if(e.key==='End')j=tabs.length-1;if(j!==null){e.preventDefault();show(tabs[j],true)}})});
+ const want=tabs.find(t=>location.hash&&('#'+t.getAttribute('aria-controls'))===location.hash);show(want||tabs[0]);
+}
+const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const svg=document.querySelector('.agentnet');if(svg&&reduce&&svg.pauseAnimations)svg.pauseAnimations();
+const tr=document.getElementById('agentTrace');let paused=false,timer=null;
+if(tr&&!reduce){const lines=[...tr.querySelectorAll('.trace-lines li')];tr.classList.add('anim');let i=0;
+ const step=()=>{if(paused)return;if(i<lines.length){lines[i].classList.add('on');i++;timer=setTimeout(step,i===lines.length?3200:850)}else{lines.forEach(l=>l.classList.remove('on'));i=0;timer=setTimeout(step,500)}};
+ timer=setTimeout(step,400);
+ const top=document.querySelector('.aiviz-top');
+ if(top){const b=document.createElement('button');b.type='button';b.className='flowtoggle';b.setAttribute('aria-pressed','false');b.textContent='❚❚ Pause';
+  b.addEventListener('click',()=>{paused=!paused;b.setAttribute('aria-pressed',String(paused));b.textContent=paused?'▶ Play':'❚❚ Pause';
+   if(svg){paused?svg.pauseAnimations():svg.unpauseAnimations()}
+   if(paused){clearTimeout(timer);lines.forEach(l=>l.classList.add('on'))}else{lines.forEach(l=>l.classList.remove('on'));i=0;timer=setTimeout(step,300)}});
+  const ml=top.querySelector('.mini-label');if(ml)ml.replaceWith(b);else top.appendChild(b);}}
+})();
