@@ -23,6 +23,7 @@
 - [MCP and A2A](https://agenticintegrationhub.com/mcp-api): current specifications and gateway landscape
 - [Enterprise agents](https://agenticintegrationhub.com/agents): agent platforms and protocol support
 - [Orchestration](https://agenticintegrationhub.com/orchestration): long-running tasks, approvals and integration patterns
+- [Agent Policy Simulator](https://agenticintegrationhub.com/agent-policy-simulator): interactive, browser-only simulator of AI agent governance policies (allow, deny, approval, trace, audit)
 - [Developer tools](https://agenticintegrationhub.com/tools): MCP tool linter, A2A Agent Card builder, payload utilities
 - [What's new](https://agenticintegrationhub.com/whats-new): dated changelog
 

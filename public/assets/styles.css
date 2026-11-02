@@ -179,3 +179,51 @@ pre.policy .c{color:#7f93a8}
 @media(max-width:980px){.aihero-grid,.defgrid,.pgrid{grid-template-columns:1fr}.aihero{padding:44px 0}.steps{grid-template-columns:repeat(2,1fr)}.endgrid{grid-template-columns:1fr 1fr}.endgrid .endcol:first-child{grid-column:1/-1}.guidegrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:580px){.aipanel{padding:18px}.steps,.layers2,.guidegrid,.endgrid{grid-template-columns:1fr}.mmrow{grid-template-columns:1fr 1fr 1fr;gap:6px}.mm{font-size:12px;padding:8px 6px}.mm small{font-size:10.5px}.trace{font-size:11px}.trace b{min-width:78px}.trace-lines{min-height:160px}.aitabs button{padding:9px 13px;font-size:13px}.decisions2 li{font-size:13px}.defband h2{font-size:23px}.aistats span{font-size:12px}}
 .aihero-grid>*{min-width:0}.aibadge{max-width:100%;flex-wrap:wrap;line-height:1.4}@media(max-width:580px){.aibadge{font-size:10.5px;letter-spacing:.3px;padding:5px 11px}.aiviz{padding:14px 12px 12px}.trace-lines li{white-space:normal;overflow:visible}.trace b{min-width:0;margin-right:6px}}
+/* ===== Agent Policy Simulator ===== */
+.ps-section{padding-top:40px}
+.ps-title{font:700 19px 'Space Grotesk',sans-serif;margin:0 0 12px;letter-spacing:-.3px}
+#policySim>.ps-title{margin-top:26px}
+.ps-presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.ps-preset{display:inline-flex;align-items:center;gap:8px;background:#0f2034;color:#d5e1ec;border:1px solid #2c4560;border-radius:10px;padding:8px 11px;font-size:13.5px;font-weight:600;transition:.15s}
+.ps-preset:hover{border-color:var(--accent)}
+.ps-preset[aria-pressed=true]{border-color:var(--accent);background:linear-gradient(135deg,rgba(83,224,182,.2),rgba(105,169,255,.12));color:#fff}
+.ps-preset .dec{font-size:10.5px;padding:1px 7px}
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.ps-grid>*{min-width:0}
+.ps-card{background:linear-gradient(150deg,#112237,#0b1a2c);border:1px solid var(--border);border-radius:16px;padding:22px}
+.ps-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.ps-fields label{display:block;font-size:12.5px;font-weight:700;color:#c2d4e6}
+.ps-fields .input{margin-top:5px;padding:9px 11px;font-size:14px}
+.ps-fields label.check{display:flex;align-items:center;gap:8px;font-weight:600;grid-column:1/-1}
+.ps-group{grid-column:1/-1;border:1px solid #24405a;border-radius:12px;padding:12px 14px 14px;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.ps-group[hidden]{display:none}
+.ps-group legend{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--accent);padding:0 6px}
+.ps-share{margin-top:14px;padding:8px 14px;font-size:13.5px}
+.ps-resultcard{position:sticky;top:90px}
+.ps-decision{border-radius:14px;padding:18px;border:1px solid;display:grid;gap:8px}
+.ps-decision.allow{border-color:#2f8f73;background:linear-gradient(135deg,rgba(13,47,42,.9),rgba(13,47,42,.4))}
+.ps-decision.approve{border-color:#8f7330;background:linear-gradient(135deg,rgba(46,38,16,.9),rgba(46,38,16,.4))}
+.ps-decision.deny{border-color:#8f4436;background:linear-gradient(135deg,rgba(48,21,16,.9),rgba(48,21,16,.4))}
+.ps-badge{font:700 26px 'Space Grotesk',sans-serif;letter-spacing:-.5px}
+.ps-decision.allow .ps-badge{color:#53e0b6}.ps-decision.approve .ps-badge{color:#ffd27a}.ps-decision.deny .ps-badge{color:#ff9e8a}
+.ps-who{font-size:14px;color:#d5e1ec}.ps-who code{color:var(--accent)}
+.ps-h{font:700 14px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin:18px 0 6px}
+.ps-why{margin:0;padding-left:18px}.ps-why li{color:#e1edf6;margin:5px 0;font-size:14.5px}.ps-why code{color:var(--accent);margin-right:4px}
+.ps-next{color:#cad7e6;margin:0;font-size:14.5px}
+.ps-enf{margin:14px 0 0;border-top:1px solid var(--border);padding-top:12px}
+.ps-more{margin-top:18px}
+.ps-more summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.ps-more summary::-webkit-details-marker{display:none}
+.ps-more summary .ps-title{margin:0}
+.ps-more summary:before{content:'▸';color:var(--accent);margin-right:2px}
+.ps-more[open] summary:before{content:'▾'}
+.ps-more[open] summary{margin-bottom:12px}
+.ps-tablewrap{overflow-x:auto}
+.ps-trace{margin:0;font-size:13px}.ps-trace tr.hit td{background:rgba(83,224,182,.06)}.ps-trace td:nth-child(2),.ps-trace td:nth-child(3){white-space:nowrap}
+.ps-trace .dec.scope{color:#8ec5ff;border-color:#3d6f9a;background:#0f2238}
+.ps-audit{margin:0 0 12px;font-size:12.5px}
+.ps-editor{width:100%;min-height:340px;background:#061525;color:var(--text);border:1px solid #3c526b;border-radius:10px;padding:13px;font:12.5px/1.55 ui-monospace,monospace;resize:vertical;margin-top:6px}
+.ps-ok{color:#53e0b6}.ps-err{color:#ff9e8a}
+@media(max-width:980px){.ps-grid{grid-template-columns:1fr}.ps-resultcard{position:static}}
+@media(max-width:580px){.ps-fields,.ps-group{grid-template-columns:1fr}.ps-card{padding:16px}.ps-badge{font-size:22px}.ps-preset{font-size:12.5px;padding:7px 9px}}
+.ps-section .ps-title,.ps-section h2.ps-title{font:700 19px/1.3 "Space Grotesk",sans-serif;letter-spacing:-.3px;margin:0 0 12px}#policySim>h2.ps-title{margin-top:26px}.ps-section .ps-more summary h2.ps-title{margin:0}#policySim [hidden]{display:none!important}

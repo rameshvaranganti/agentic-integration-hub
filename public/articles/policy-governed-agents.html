@@ -26,7 +26,7 @@
 <h3>4. Operational policies</h3><p>Rate limits, per-case budgets for tool calls, tokens and time, delegation depth limits, allowed time windows for batch-like actions, and circuit breakers that stop an agent when error or denial rates spike.</p>
 <h3>5. Lifecycle policies</h3><p>Rules about agents themselves: every agent must be registered with an owner and risk tier, pass testing before it reaches production, have changes to prompts, models or tools reviewed, and be retired when no longer needed.</p>
 
-<h2 id="example">Example policy set</h2>
+<div class="notice"><strong>Try it.</strong> Test rules like these interactively in the <a href="/agent-policy-simulator">Agent Policy Simulator</a>: change the approval limit, simulate a prompt injection or a bank-detail fraud attempt, and see the decision, trace and audit record.</div><h2 id="example">Example policy set</h2>
 <p>An illustrative policy for an HR assistant agent and a finance agent, written as pseudo-YAML for readability. In a real engine these would be Rego, Cedar or your gateway's policy language.</p>
 <pre><code># Illustrative only
 policy: hr-assistant
