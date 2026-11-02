@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://agenticintegrationhub.com/</loc><lastmod>2026-10-31</lastmod><priority>1.0</priority></url>
-  <url><loc>https://agenticintegrationhub.com/about</loc><lastmod>2026-10-31</lastmod><priority>0.9</priority></url>
-  <url><loc>https://agenticintegrationhub.com/knowledge</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://agenticintegrationhub.com/whats-new</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://agenticintegrationhub.com/</loc><lastmod>2026-11-01</lastmod><priority>1.0</priority></url>
+  <url><loc>https://agenticintegrationhub.com/about</loc><lastmod>2026-11-01</lastmod><priority>0.9</priority></url>
+  <url><loc>https://agenticintegrationhub.com/knowledge</loc><lastmod>2026-11-01</lastmod><priority>0.8</priority></url>
+  <url><loc>https://agenticintegrationhub.com/whats-new</loc><lastmod>2026-11-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://agenticintegrationhub.com/research</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://agenticintegrationhub.com/tools</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://agenticintegrationhub.com/apps</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://agenticintegrationhub.com/agents</loc><lastmod>2026-10-31</lastmod><priority>0.6</priority></url>
   <url><loc>https://agenticintegrationhub.com/mcp-api</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
-  <url><loc>https://agenticintegrationhub.com/orchestration</loc><lastmod>2026-10-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://agenticintegrationhub.com/orchestration</loc><lastmod>2026-11-01</lastmod><priority>0.6</priority></url>
   <url><loc>https://agenticintegrationhub.com/contact</loc><lastmod>2026-10-31</lastmod><priority>0.4</priority></url>
   <url><loc>https://agenticintegrationhub.com/disclaimer</loc><lastmod>2026-10-31</lastmod><priority>0.3</priority></url>
   <url><loc>https://agenticintegrationhub.com/articles/what-is-agentic-integration</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
@@ -22,7 +22,7 @@
   <url><loc>https://agenticintegrationhub.com/articles/agent-identity-authorization</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://agenticintegrationhub.com/articles/mcp-gateway-basics</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://agenticintegrationhub.com/articles/api-centric-patterns</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://agenticintegrationhub.com/articles/policy-governed-agents</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://agenticintegrationhub.com/articles/policy-governed-agents</loc><lastmod>2026-11-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://agenticintegrationhub.com/articles/integration-orchestration</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://agenticintegrationhub.com/agenticintegrationhub-support</loc><lastmod>2026-10-31</lastmod><priority>0.3</priority></url>
   <url><loc>https://agenticintegrationhub.com/agenticintegrationhub-privacy</loc><lastmod>2026-10-31</lastmod><priority>0.3</priority></url>
@@ -33,4 +33,4 @@
   <url><loc>https://agenticintegrationhub.com/sap-cpi-iflow-builder-support</loc><lastmod>2026-10-31</lastmod><priority>0.3</priority></url>
   <url><loc>https://agenticintegrationhub.com/sap-cpi-iflow-builder-privacy</loc><lastmod>2026-10-31</lastmod><priority>0.3</priority></url>
   <url><loc>https://agenticintegrationhub.com/sap-cpi-iflow-builder-terms</loc><lastmod>2026-10-31</lastmod><priority>0.3</priority></url>
-</urlset>
+<url><loc>https://agenticintegrationhub.com/author</loc><lastmod>2026-11-01</lastmod><priority>0.8</priority></url><url><loc>https://agenticintegrationhub.com/articles/multi-agent-orchestration</loc><lastmod>2026-11-01</lastmod><priority>0.8</priority></url></urlset>

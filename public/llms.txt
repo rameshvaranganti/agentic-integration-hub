@@ -14,7 +14,8 @@
 - [Agent identity and authorization](https://agenticintegrationhub.com/articles/agent-identity-authorization): User, agent and service identities; OAuth 2.1 for MCP; token exchange; multi-hop delegation; NIST and IETF status.
 - [MCP gateway architecture](https://agenticintegrationhub.com/articles/mcp-gateway-basics): Reference architecture, per-tool authorization, OAuth and a worked example of exposing an existing API to agents.
 - [API-centric integration patterns](https://agenticintegrationhub.com/articles/api-centric-patterns): Build governed APIs that connect enterprise applications and agent-enabled workflows.
-- [Policy-governed enterprise agents](https://agenticintegrationhub.com/articles/policy-governed-agents): Keeping agent actions authorized, explainable and auditable with approval gates and least privilege.
+- [Multi-agent orchestration for enterprise integration](https://agenticintegrationhub.com/articles/multi-agent-orchestration): Five orchestration patterns, reference architecture, worked invoice example, delegation governance and failure handling.
+- [Governance and security policies for enterprise AI agents](https://agenticintegrationhub.com/articles/policy-governed-agents): Policy types, enforcement points, example policy set, human approval, agent lifecycle and audit evidence.
 - [Integration orchestration fundamentals](https://agenticintegrationhub.com/articles/integration-orchestration): Correlation IDs, compensation and deterministic checkpoints for agentic workflows.
 
 ## Hubs
@@ -27,7 +28,8 @@
 
 ## About
 
-- [Author](https://agenticintegrationhub.com/about): Rameshkumar Varanganti
+- [About the hub](https://agenticintegrationhub.com/about): mission, coverage, audience and editorial principles
+- [Author](https://agenticintegrationhub.com/author): Rameshkumar Varanganti
 - [Research](https://agenticintegrationhub.com/research): research areas, open problems and standards tracker
 - [Apps and plugins](https://agenticintegrationhub.com/apps): assistant plugins with support, privacy and terms pages
 - [Disclaimer](https://agenticintegrationhub.com/disclaimer): independence statement
