@@ -50,7 +50,7 @@
 <p>The consistent message from NIST is <em>adapt, don't reinvent</em>: existing OAuth, OIDC and workload identity standards can cover most agent needs today if applied rigorously. Waiting for a dedicated "agent identity standard" is not a reason to keep shared technical users.</p>
 
 <h2 id="sap">In SAP landscapes</h2>
-<p>SAP integration architects already know principal propagation from the Cloud Connector and the OAuth 2.0 SAML bearer flow. SAP lists principal propagation and SAML bearer token exchange on the MCP Gateway roadmap, which will allow end-to-end user identity from the calling agent to the backend. Until then, enforce user scoping in the API artifact policy or the iFlow from the authenticated identity, and avoid tools that accept a user or employee ID as a free argument.</p>
+<p>SAP integration architects already know principal propagation from the Cloud Connector and the OAuth 2.0 SAML bearer flow. SAP is rolling out principal propagation and SAML bearer token exchange for the MCP Gateway from its September 2026 update, carrying end-to-end user identity from the calling agent to the backend. Where it is not yet enabled on your tenant, enforce user scoping in the API artifact's policies from the authenticated identity, and avoid tools that accept a user or employee ID as a free argument.</p>
 
 <h2 id="checklist">Checklist</h2>
 <ul class="checklist">
